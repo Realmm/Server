@@ -1,0 +1,5 @@
+main: me.realmm.disabledrops.DisableDrops
+name: DisableDrops
+author: Realmm
+description: Disables some drops from mobs
+version: 1.0.0

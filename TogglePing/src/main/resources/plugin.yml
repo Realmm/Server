@@ -1,0 +1,6 @@
+main: me.realmm.toggleping.TogglePing
+name: TogglePing
+version: 1.0.0
+author: Realmm
+description: Shows your ping on the scoreboard
+depend: [ServerScoreboard]

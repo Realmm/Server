@@ -1,0 +1,17 @@
+#------------------------------------------------------------
+#Border
+map-size: 1000
+end-of-world: "&cYou have reached the end of the world."
+#------------------------------------------------------------
+
+#------------------------------------------------------------
+#Chunk load before SOTW
+
+world-name: "world"
+
+#Amount of chunks to load per interval
+chunk-load-amount: 250
+
+#In ticks, 20 ticks / second
+chunk-update-interval: 10 #10 ticks, half a second
+#------------------------------------------------------------

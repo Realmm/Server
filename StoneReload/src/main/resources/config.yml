@@ -1,0 +1,15 @@
+#The name of the world the stone is reloading in
+world-name: "world"
+
+#How much time, in seconds, should a block stay in its current state
+#Note, if the server restarts, the time listed below begins counting again, so sync the reload with the time
+reload: 10 #21600 seconds, this will reload the block 4 times a day back to it's proper state
+
+#The interval in ticks (20 ticks / second) of how quick the updates should happen, when it is updating. Smaller interval, more lag
+block-update-interval: 1 #10 ticks => Blocks will update every half a second
+
+#The amount of successful block updates to perform per interval
+block-change-amount: 2000
+
+#The y level at which stone should be set, inclusive and below levels will be turned to stone, above to air
+stone-y: 60

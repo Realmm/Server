@@ -1,0 +1,21 @@
+mongodb:
+  host: localhost
+  database: warps
+  port: 27017
+
+#Change what rank gets what amount of warps
+#Permission will be warps.<name>, for e.g. warps.default
+#If you don't have any of these permissions, by default you will be limited to 5 warps
+warps:
+  default: 5
+  vip: 15
+  pro: 25
+
+#How long overwriting should last for before it auto-cancels itself, in seconds
+overwriting-duration: 15
+#How long your attack cooldown should be after you warp, in seconds
+attack-cooldown: 10
+#How long you should have to wait to warp if a player not on your team is nearby
+warp-cooldown: 10
+#How far you have to be from any player not on your team to warp instantly
+warp-distance: 10

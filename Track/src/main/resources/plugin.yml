@@ -1,0 +1,5 @@
+name: Track
+author: Realmm
+description: Find players locations using trackers
+main: me.realmm.track.Track
+version: 1.0.0

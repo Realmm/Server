@@ -1,0 +1,3 @@
+#Choose which drops to disable, full list can be found here: https://helpch.at/docs/1.8/org/bukkit/Material.html
+disabled-drops:
+  - ENDER_PEARL

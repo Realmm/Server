@@ -1,0 +1,6 @@
+main: me.realmm.stonereload.StoneReload
+name: StoneReload
+version: 1.0.0
+author: Realmm
+description: Reloads the damaged stone around spawn back to fresh stone
+softdepend: [ServerScoreboard]

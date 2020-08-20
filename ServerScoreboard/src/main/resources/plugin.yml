@@ -1,0 +1,5 @@
+main: me.realmm.serverscoreboard.ServerScoreboard
+name: ServerScoreboard
+author: Realmm
+description: Enables scoreboard
+version: 1.0.0

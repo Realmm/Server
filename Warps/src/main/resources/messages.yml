@@ -1,0 +1,37 @@
+scoreboard-cooldown: "&6Attack cooldown: &c%time%"
+scoreboard-teleporting: "&6Teleporting in... &c%time%"
+
+no-warp-found: "&cNo warps were found with the name %warp%"
+nearby: "&7Someone is nearby. Warping in 10 seconds. Don't move."
+attack-cooldown: "&7You cannot attack for 10 seconds."
+warp-cancelled: "&cYou moved. Warp cancelled."
+warp-spawn: "&cYou cannot warp this close to spawn."
+set-warp-spawn: "&7You cannot use this command within 512 blocks of spawn"
+set-warp: "&7You have set %warp% as a warp."
+delete-warp: "&7Warp &c%warp% &7has been deleted."
+warp-not-found: "&7Warp &c%warp% &7could not be found."
+overwrite-out-of-time: "&7You ran out of time. Cancelling overwrite of warp &6%warp%&7."
+overwritten-warp: "&7You have overwritten the warp &6%warp%&7."
+cancelled-overwrite: "&7You have &ccancelled &7the warp override."
+maximum-warps: "&7You have set the max amount of warps allowed for your rank."
+home-set: "&7Your home has been set"
+home-not-set: "&7Your home is not set"
+
+overwrite-warp: "&7You already have a warp named &6%warp%&7.\n&7Would you like to overwrite it? %yes% &7| %no%"
+yes-text: "&a/yes"
+yes-hover: "&7Click to overwrite warp &6%warp%&7."
+no-text: "&c/no"
+no-hover: "&7Click to cancel warp overwrite."
+
+warp-list-title: "&7&m--- &6Warp List &7(&e%warpAmount%&7/&e%warpMaxAmount%&7) &m---"
+warp-list-bracket-color: GRAY
+warp-list-warp-color: YELLOW
+warp-list-separator: "&7, "
+warp-list-hover: "&7Warp to &e%warp%&7."
+
+warp-help: "&7&m--- &6Warp Help &7&m---"
+help-list:
+  - "&6/go &7- &eDisplays this page."
+  - "&6/go list &7- &eLists your warps."
+  - "&6/go set <name> &7- &eSets a warp at your location."
+  - "&6/go del <name> &7- &eDeletes the warp."

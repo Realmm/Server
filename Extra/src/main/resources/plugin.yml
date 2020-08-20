@@ -1,0 +1,5 @@
+main: me.realmm.extra.Extra
+name: Extra
+author: Realmm
+description: Provides extra utilities not worth putting into it's own plugin
+version: 1.0.0

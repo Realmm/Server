@@ -1,0 +1,8 @@
+main: me.realmm.warps.Warps
+name: Warps
+author: Realmm
+description: Allows players to warp to their own player set warps
+version: 1.0.0
+
+softdepend:
+  - ServerScoreboard

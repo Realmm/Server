@@ -1,0 +1,9 @@
+#Distance in blocks you need to be from the mob to capture
+distance-to-capture: 10
+#If you're this level or over when you try and capture a mob, it will guaranteed drop an egg
+guaranteed-capture-level: 35
+#Below this level you cannot capture at all, over this level you have a percent chance to succeed
+#It will take your levels even if you don't succeed
+lowest-capture-level: 10
+#Percent chance of successfully capturing after the lowest capture level, but below the guaranteed capture level
+percent-success: 75

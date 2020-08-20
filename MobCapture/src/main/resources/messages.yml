@@ -1,0 +1,4 @@
+success: "&aYou successfully captured a mob! Your levels were drained."
+failure: "&cYou were unsuccessful. Your levels were drained."
+low-level: "&cYour are too low of a level. Increase your level to above 10!"
+not-far-enough: "&cYou are not far enough away from the mob."

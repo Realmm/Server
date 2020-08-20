@@ -1,0 +1,14 @@
+tracker:
+  main:
+    centre: DIAMOND_BLOCK
+    arm-block: OBSIDIAN
+    end-block: GOLD_BLOCK
+    distance-per-block: 25
+  temp:
+    centre: OBSIDIAN
+    arm-block: COBBLESTONE
+    end-block: STONE
+    distance-per-block: 25
+
+color-tracked-all-player: GREEN
+color-non-tracked-all-player: GRAY

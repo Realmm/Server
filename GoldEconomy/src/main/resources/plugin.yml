@@ -1,0 +1,7 @@
+main: me.realmm.goldeconomy.GoldEconomy
+author: Realmm
+description: A plugin for player ran, gold based economy
+version: 1.0.0
+name: GoldEconomy
+softdepend:
+  - ServerScoreboard

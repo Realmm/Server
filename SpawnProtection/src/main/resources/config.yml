@@ -1,0 +1,11 @@
+data:
+  point-1:
+  point-2:
+
+messages:
+  no-permission: "&cYou do not have permission to use this command"
+  set-spawn-protect: "&aYou successfully set the area for spawn protection"
+  set-point-one: "&aYou set point one"
+  not-spawn-protected: "&cYou are no longer spawn protected."
+  scoreboard-protected: "&6Spawn Protection: &aEnabled"
+  scoreboard-unprotected: "&6Spawn Protection: &cDisabled"

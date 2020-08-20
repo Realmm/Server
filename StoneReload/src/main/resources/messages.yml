@@ -1,0 +1,22 @@
+scoreboard: "&4Spawn Reloading&7: &c%percent%%"
+
+incorrect-permissions: "&cIncorrect permissions"
+full-inventory: "&cFull inventory, clear some space!"
+given-item: "&aYou were given the selecting tool!"
+selected: "&aLocation one selected"
+selected-two: "&aLocation two selected"
+added: "&aSelection saved, and will now reload automatically. To change this, type /sr help"
+select-area: "&cSelect an area to set"
+none-saved: "&cNo areas yet saved"
+invalid-id: "&cInvalid ID"
+deleted: "&aSuccessfully deleted cuboid with id %id%"
+
+help:
+  - "&e/stonereload &8: &7Gives you the item to select an area to reload"
+  - "&e/stonereload help &8: &7Lists this help menu"
+  - "&e/stonereload set &8: &7Saves your current selection"
+  - "&e/stonereload list &8: &7List all ID-Cuboid combinations"
+  - "&e/stonereload delete <id> &8: &7Deletes a certain cuboid by ID"
+
+list-title: "&7&m--- &6ID : Cuboid &7&m---"
+list-line: "&e%id%&7: &a(%x1%, %y1%, %z1%), (%x2%, %y2%, %z2%)"

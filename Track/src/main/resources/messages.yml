@@ -1,0 +1,8 @@
+no-permission: "&cIncorrect permissions"
+not-on-tracker: "&cNot a valid tracker"
+track-all-result: "&3%direction%(%distance%): "
+track-result-found: "%player% &ais within %distance% blocks %direction% of here"
+track-result-not-found: "%player% &cis not within %distance% of %direction%"
+player-not-played: "&c%player% has not played before"
+player-not-online: "&c%player% is not online"
+click-to-track: "&aClick here to track %player%"

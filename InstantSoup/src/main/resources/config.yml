@@ -1,0 +1,4 @@
+#Amount of hearts soup should heal for, can be decimal for half heart
+heal-amount: 3.5
+#Amount of food soup should feed for, cannot be decimal
+feed-amount: 3

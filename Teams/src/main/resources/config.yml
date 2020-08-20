@@ -1,0 +1,4 @@
+mongodb:
+  host: localhost
+  database: teams
+  port: 27017

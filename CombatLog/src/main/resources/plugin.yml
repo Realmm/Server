@@ -1,0 +1,5 @@
+main: me.realmm.combatlog.CombatLog
+name: CombatLog
+author: Realmm
+description: Spawns a killable villager if a player logs out while combat tagged with the players inventory
+version: 1.0.0

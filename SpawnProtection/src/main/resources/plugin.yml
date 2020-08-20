@@ -1,0 +1,9 @@
+main: me.realmm.spawnprotection.SpawnProtection
+name: SpawnProtection
+author: Realmm
+description: Enables protection in spawn
+version: 1.0.0
+
+depend: [Warps]
+softdepend:
+  - ServerScoreboard

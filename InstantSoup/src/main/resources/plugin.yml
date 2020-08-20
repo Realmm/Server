@@ -1,0 +1,5 @@
+main: me.realmm.instantsoup.InstantSoup
+name: InstantSoup
+author: Realmm
+description: Instantly heals players that eat soup
+version: 1.0.0

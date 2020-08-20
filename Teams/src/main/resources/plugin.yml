@@ -1,0 +1,10 @@
+main: me.realmm.teams.Teams
+version: 1.0.0
+description: Allows for player created Teams
+author: Realmm
+name: Teams
+
+softdepend:
+  - ServerScoreboard
+  - SpawnProtection
+depend: [GoldEconomy, Warps]
