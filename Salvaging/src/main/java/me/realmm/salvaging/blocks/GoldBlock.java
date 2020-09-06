@@ -1,4 +1,11 @@
 package me.realmm.salvaging.blocks;
 
-public class GoldBlock {
+import org.bukkit.Material;
+
+public class GoldBlock extends ItemBlock {
+
+    public GoldBlock() {
+        super(Material.GOLD_BLOCK);
+    }
+
 }

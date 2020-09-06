@@ -1,0 +1,5 @@
+main: me.realmm.salvaging.Salvaging
+name: Salvaging
+author: Realmm
+description: Allows for players to salvage materials from created items
+version: 1.0.0

@@ -15,3 +15,8 @@ chunk-load-amount: 250
 #In ticks, 20 ticks / second
 chunk-update-interval: 10 #10 ticks, half a second
 #------------------------------------------------------------
+
+#------------------------------------------------------------
+help:
+  - "&7First line of help"
+  - "&7Second line of help"

@@ -1,4 +1,11 @@
 package me.realmm.salvaging.blocks;
 
-public class IronBlock {
+import org.bukkit.Material;
+
+public class IronBlock extends ItemBlock {
+
+    public IronBlock() {
+        super(Material.IRON_BLOCK);
+    }
+
 }
