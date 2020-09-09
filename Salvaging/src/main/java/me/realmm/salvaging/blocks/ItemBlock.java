@@ -4,19 +4,30 @@ import org.bukkit.Material;
 
 public abstract class ItemBlock {
 
-    private Material material;
+    private Material block, drop;
 
-    public ItemBlock(Material material) {
-        this.material = material;
+    public ItemBlock(Material block, Material drop) {
+        this.block = block;
+        this.drop = drop;
     }
 
-    public Material getMaterial() {
-        return material;
+    public Material getBlockType() {
+        return block;
     }
 
-    public void setMaterial() {
-        this.material = material;
+    public Material setBlockType(Material material) {
+        this.block = material;
     }
+
+    public Material getDropType() {
+        return drop;
+    }
+
+    public void setDropType(Material material) {
+        this.drop = material;
+    }
+
+    
 
 
 

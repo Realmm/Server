@@ -1,7 +1,6 @@
 package me.realmm.salvaging.listeners;
 
 import me.realmm.salvaging.utils.BlockUtil;
-import net.jamesandrew.commons.logging.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -51,7 +50,7 @@ public class PlayerInteractListener implements Listener {
             }
         }
 
-        Logger.debug("size: " + items.size());
+//        Logger.debug("size: " + items.size());
        BlockUtil.dropValidDrops(b, b.getLocation(), items);
 
     }
