@@ -1,11 +1,11 @@
 package me.realmm.salvaging.utils;
 
 import net.jamesandrew.commons.logging.Logger;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.inventory.ItemStack;
+
+import me.realmm.salvaging.blocks.ItemBlock;
 
 import java.util.*;
 
@@ -13,26 +13,26 @@ public final class BlockUtil {
 
     private BlockUtil(){}
 
-    private static final Material[] validBlockTypes = {Material.DIAMOND_BLOCK, Material.GOLD_BLOCK, Material.IRON_BLOCK};
-    private static final Material[] validItemDrops = {Material.DIAMOND, Material.GOLD_INGOT, Material.IRON_INGOT};
     private static final Material baseBlock = Material.FURNACE;
+    private static final Set<ItemBlock> itemBlocks = new HashSet<>();
 
     public static boolean isValidType(Material material) {
-        return Arrays.stream(validBlockTypes).anyMatch(type -> material == type);
+        return itemBlocks.stream().anyMatch(b -> b.getBlockType() == material);
     }
 
-    public static void dropValidDrops(Block clickedBlock, Location location, List<ItemStack> itemStacks) {
-        itemStacks.forEach(i -> {
-            if (i == null) return;
-            if (isValidItemDrop(i.getType())) {
-                location.getWorld().dropItemNaturally(location, i);
-            }
-        });
+    public static void registerItemBlock(ItemBlock block) {
+        if (itemBlocks.stream().anyMatch(b -> b.getBlockType() == block.getBlockType() || b.getDropType() == block.getDropType())) 
+            throw new IllegalArgumentException("Unable to register item block, block type or drop type already registered");
+        itemBlocks.add(block);
     }
 
-    public static boolean isValidItemDrop(Material m) {
-        return Arrays.stream(validItemDrops).anyMatch(type -> m == type);
+    public static ItemBlock asItemBlock(Material material) {
+        return itemBlocks.stream().filter(b -> b.getBlockType() == material).findFirst().orElse(null);
     }
+
+    public static boolean isItemBlock(Material material) {
+        return asItemBlock(material) != null;
+    } 
 
     //Determine if the block is in a valid setup
     public static boolean isValidSetup(Block b) {
@@ -43,9 +43,7 @@ public final class BlockUtil {
 
         Set<Block> foundBlocks = new HashSet<>();
         for (BlockFace bf : listBlockFaces) {
-            Logger.debug("relative: " + bf);
             Block block = b.getRelative(bf);
-            Logger.debug("type of relative: " + block.getType());
             if (isValidType(block.getType())) {
                 foundBlocks.add(block);
             } else if (block.getType() == baseBlock) {
@@ -58,11 +56,8 @@ public final class BlockUtil {
         Collections.shuffle(foundBlocksList);
 
         boolean valid = false;
-        //Determining if all the blocks are valid in a row, up until a max recursion threshold
         for (Block block : foundBlocksList) {
-            Logger.debug("block found: " + block.getType());
             valid = isValidSetup(block);
-            Logger.debug("validnow? " + valid);
             boolean isBaseBlock = block.getType() == baseBlock;
             if (isBaseBlock) return true;
             if (valid) break;
