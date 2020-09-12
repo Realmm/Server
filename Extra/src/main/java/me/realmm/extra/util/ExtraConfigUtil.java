@@ -3,9 +3,9 @@ package me.realmm.extra.util;
 import me.realmm.extra.Extra;
 import net.jamesandrew.realmlib.lang.Lang;
 
-public final class ConfigUtil {
+public final class ExtraConfigUtil {
 
-    private ConfigUtil(){}
+    private ExtraConfigUtil(){}
 
     public static final int MAP_SIZE = getInt("map-size");
     public static final String END_OF_WORLD = get("end-of-world");
