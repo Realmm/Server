@@ -1,6 +1,7 @@
 package me.realmm.goldeconomy.commands.sub;
 
 import me.realmm.goldeconomy.entities.EconPlayer;
+import me.realmm.goldeconomy.entities.WithdrawResponse;
 import me.realmm.goldeconomy.util.EconUtil;
 import me.realmm.goldeconomy.util.Messages;
 import net.jamesandrew.realmlib.command.SubCommand;
@@ -17,10 +18,19 @@ public class WithdrawAllCommand extends SubCommand {
             EconPlayer e = EconUtil.getEconPlayer(p);
 
             int amount = (int) Math.floor(e.getBalance().doubleValue());
-            if (e.withdraw(amount)) {
-                p.sendMessage(new Placeholder(Messages.WITHDRAWN).setPlaceholders("amount").setToReplace(amount).toString());
-            } else {
-                p.sendMessage(Messages.FULL_INVENTORY);
+
+            WithdrawResponse response = e.withdraw(amount);
+
+            switch (response) {
+                case SUCCESS:
+                    p.sendMessage(new Placeholder(Messages.WITHDRAWN).setPlaceholders("amount").setToReplace(amount).toString());
+                    break;
+                case INSUFFICIENT_FUNDS:
+                    p.sendMessage(Messages.INSUFFICIENT_BALANCE);
+                    break;
+                case FULL_INVENTORY:
+                    p.sendMessage(Messages.FULL_INVENTORY);
+                    break;
             }
         });
     }

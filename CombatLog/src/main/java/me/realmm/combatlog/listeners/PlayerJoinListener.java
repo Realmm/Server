@@ -11,7 +11,7 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void on(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        CombatPlayer c =
+
     }
 
 }

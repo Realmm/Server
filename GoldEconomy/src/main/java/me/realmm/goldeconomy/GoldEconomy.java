@@ -59,7 +59,8 @@ public class GoldEconomy extends RealmLib {
                 new NamedItem("swp2", "Potion of Swiftness", Material.POTION, Potion.SWIFTNESS_TWO.getId()),
                 new NamedItem("frp1e", "Potion of Fire Resistance", Material.POTION, Potion.FIRE_RESISTANCE_EXTENDED.getId()),
                 new NamedItem("dp2s", "Splash Potion of Harming", Material.POTION, Potion.HARMING_SPLASH_TWO.getId()),
-                new NamedItem("soup", "Mushroom Soup", Material.MUSHROOM_SOUP)
+                new NamedItem("soup", "Mushroom Soup", Material.MUSHROOM_SOUP),
+                new NamedItem("invp", "Potion of Invisibility", Material.POTION, Potion.INVISIBILITY_EXTENDED.getId())
         ).forEach(EconUtil::registerNamedItem);
     }
 

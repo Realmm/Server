@@ -26,7 +26,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <outputDirectory>F:\Dev\Minecraft\Test Server\plugins</outputDirectory>
+                    <outputDirectory>D:\Development\Test Server\plugins</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
@@ -84,6 +84,12 @@
         <dependency>
             <groupId>me.realmm</groupId>
             <artifactId>warps</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.realmm</groupId>
+            <artifactId>extra</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>

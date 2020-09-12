@@ -4,6 +4,7 @@ import me.realmm.extra.border.PlayerMoveListener;
 import me.realmm.extra.chunkload.commands.LoadChunksCommand;
 import me.realmm.extra.chunkload.util.ChunkUtil;
 import me.realmm.extra.disableend.listeners.PlayerTeleportListener;
+import me.realmm.extra.helpcommand.HelpCommand;
 import me.realmm.extra.joinleavemessages.PlayerJoinListener;
 import me.realmm.extra.joinleavemessages.PlayerQuitListener;
 import net.jamesandrew.realmlib.RealmLib;
@@ -43,7 +44,8 @@ public class Extra extends RealmLib {
 
     private void registerCommands() {
         Stream.of(
-                new LoadChunksCommand()
+                new LoadChunksCommand(),
+                new HelpCommand()
         ).forEach(Register::baseCommand);
     }
 

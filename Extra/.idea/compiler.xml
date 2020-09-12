@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Extra" />
         <module name="DisableEnd" />
+        <module name="extra" />
       </profile>
     </annotationProcessing>
   </component>

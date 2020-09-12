@@ -4,6 +4,6 @@ author: Realmm
 description: Enables protection in spawn
 version: 1.0.0
 
-depend: [Warps]
+depend: [Warps, Extra]
 softdepend:
   - ServerScoreboard

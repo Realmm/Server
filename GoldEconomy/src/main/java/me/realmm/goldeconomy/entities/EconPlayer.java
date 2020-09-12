@@ -53,16 +53,18 @@ public class EconPlayer {
         return Bukkit.getPlayer(o.getUniqueId());
     }
 
-    public boolean withdraw(int amount) {
-        if (!isOnline()) return false;
+    public WithdrawResponse withdraw(int amount) {
+        if (!isOnline()) return WithdrawResponse.OFFLINE;
         ItemStack i = new ItemStack(Material.GOLD_INGOT, amount);
         Player p = getPlayer();
-        if (!InventoryUtil.canAdd(p, i.getType(), amount)) return false;
-        p.getInventory().addItem(i);
-        balance = balance.subtract(BigDecimal.valueOf(amount)).compareTo(BigDecimal.ZERO) <= 0 ? BigDecimal.ZERO : balance.subtract(BigDecimal.valueOf(amount));
+        if (!InventoryUtil.canAdd(p, i.getType(), amount)) return WithdrawResponse.FULL_INVENTORY;
+        boolean shouldAdd = balance.subtract(BigDecimal.valueOf(amount)).compareTo(BigDecimal.ZERO) >= 0;
+        if (shouldAdd) p.getInventory().addItem(i);
+        if (!shouldAdd) return WithdrawResponse.INSUFFICIENT_FUNDS;
+        balance = shouldAdd ? balance.subtract(BigDecimal.valueOf(amount)) : balance;
         econMongo.updatePlayer(this);
         updateScoreboard();
-        return true;
+        return WithdrawResponse.SUCCESS;
     }
 
     public boolean deposit(int amount) {
