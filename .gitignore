@@ -38,6 +38,8 @@ hs_err_pid*
 
 #Extra
 *.bat
+*.classpath
+*.project
 
 RealmCommons/
 RealmLib/
